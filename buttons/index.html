@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons-bar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+
+
+
+
+<div class="bittons-bar">
+    <button class="info"> <img src="img/info.png" alt="info" class="ingo-img"> </button>
+    
+    <div class="total">
+        <button id="less" onclick="restar()"> <img src="img/less.png" alt="less"> </button>
+         <div class="totalbet">
+            <p class="totaltxt">TOTAL BET</p>
+            <p id="num" class="num">0</p>
+         </div>
+        
+        <button id="more" onclick="sumar()"><img src="img/more.png" alt="more"></button>
+    </div>
+</div>
+
+
+
+
+<script>
+
+
+const num = document.getElementById('num');
+const more = document.getElementById('more');
+const less = document.getElementById('less');
+
+
+const sumar = () => {
+   removeAnimationClass();
+   setTimeout(() =>{
+      num.classList.add('animacion');
+   }, 10);
+   num.innerText++;
+   
+   console.log(num.innerHTML);
+   return num.innerText;
+}
+
+
+const restar = () => {
+   removeAnimationClass();
+   setTimeout(() =>{
+      num.classList.add('animacion2');
+   }, 10);
+   num.innerText--;
+   
+   console.log(num.innerHTML);
+   return num.innerText;
+}
+
+
+const removeAnimationClass = () => {
+   num.classList.remove('animacion2', 'animacion');
+}
+
+
+const testColor = () =>{
+   if(num.innerText === '0'){
+      num.style.color = '#999';
+   }else if(num.innerText < '0'){
+      num.style.color = "var(--color__2)";
+   }else{
+      num.style.color = "var(--color__1)";
+   }
+}
+
+</script>
+
+
+</body>
+</html>
