@@ -19,13 +19,23 @@
 * {
     margin: 0; padding: 0;
 }
+
+.buttons-bar {position: relative;
+    display: flex;
+    margin-top: 200px;
+    background: url(../img/UI.png) center center no-repeat;
+    background-size: contain;
+    align-items: center;
+    justify-content: space-between;
+}
 /*info*/
-body {font-family: 'Noto Sans';}
+body {font-family: 'Noto Sans';height: 100vh;
+ background: #6a3505}
 .info {
     background: url(../img/info-normal.png) center center no-repeat;
     background-size: contain;
     width: 100px;
-    height: 100px;
+    height: 100px; transition: .4s;
 }
 .ingo-img {
     width: 15px;
@@ -33,16 +43,17 @@ body {font-family: 'Noto Sans';}
 .info {
     background: url(../img/info-normal.png) center center no-repeat;
     background-size: contain;
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
     border: none;
     cursor: pointer;
+    margin-left: 89px;
 }
 .info:hover {
     background: url(../img/info-hover.png) center center no-repeat;
     background-size: contain;
 }
-.info:focus {
+.info:focus, .info:active {
     background: url(../img/info-click.png) center center no-repeat;
     background-size: contain;
 }
@@ -51,11 +62,13 @@ body {font-family: 'Noto Sans';}
 /*less-more*/
 .total{
  
-        display: flex;
-        justify-content: space-between;
-        width: 390px;
-        height: 100px;
-        background: url(../img/bg_totalbet.png) center no-repeat;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    transform: rotate(0.5deg);
+    width: 310px;
+    height: 95px;
+    background: url(../img/bg_totalbet.png) center no-repeat;
     background-size: contain;
 }
 
@@ -68,7 +81,7 @@ body {font-family: 'Noto Sans';}
 }
 .totaltxt {
     color: #ff6972;
-    font-size: 29px;
+    font-size: 16px;
         line-height: 50px;
         text-align: center;
         font-weight: 700;
@@ -82,9 +95,9 @@ body {font-family: 'Noto Sans';}
        
         background: url(../img/p-m-normal.png) center center no-repeat;
       background-size: contain;
-      width: 86px;
+      width: 75px;
       height: 95px;
-      margin: 0 15px;
+      margin: 0 10px;
     
 }
 
@@ -92,15 +105,10 @@ body {font-family: 'Noto Sans';}
     background: url(../img/p-m-hover.png) center center no-repeat;
     background-size: contain;
 }
-#more:focus, #less:focus{
+#more:focus, #less:focus, #more:active, #less:active{
     background: url(../img/p-m-click.png) center center no-repeat;
     background-size: contain;
 }
-
-
-
-/* Animaciones */
-
 .animacion{
     animation: animacion .1s;
 }
@@ -122,60 +130,158 @@ body {font-family: 'Noto Sans';}
         
     }
 }
-
-
+/* field-coin + title*/
 .totalcoin {
-    width: 200px;
+    width: 155px;
     height: 100px;
     background: url(../img/bg_totalcoin.png) center center no-repeat;
     background-size: contain;
+    margin-top: 15px;
 }
 
 .good {
     font-family: 'Noto Sans';
     color: #ffe400;
-    font-size: 40px;
+    font-size: 70px;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: uppercase;flex-basis: 31%;
+    text-align: center;
 }
 
 /*turbo*/
 .turbo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    cursor: pointer;position: relative;
+    left: 25px;
   }
   
   input[type="checkbox"] {
-    width: 100px;
-    height: 200px;
+    width: 120px;
+    height: 101px;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: #c6c6c6;
+    background: url(../img/bg_turbooff.png) center center no-repeat;
+    background-size: contain;
     outline: none;
-    border-radius: 50px;
-    box-shadow: inset 0 0 5px rgba(0,0,0, .2);
+    cursor: pointer;
+ 
     transition: 0.5s;
     position: relative;
   }
   input:checked[type="checkbox"] {
-    background: #02a9f4;
+    background: url(../img/bg_turboon.png) center center no-repeat;
+    background-size: contain;
   }
   input[type="checkbox"]::before {
     content: '';
     position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
- 
-    bottom: 0;
-    background: #fff;
+    width: 99px;
+    height: 55px;
+    bottom: 10px;
+    left: 10px;
+    border: none;
+    background: url(../img/turbonormal.png) center center no-repeat;
+    background-size: contain;
     transform: scale(1.1);
-    box-shadow: 0 2px 5px rgba(0,0,0, .2);
     transition: 0.5s;
   }
-  input:checked[type="checkbox"]::before {
-    bottom: 100px;
+  input[type="checkbox"]:hover::before{
+    background: url(../img/turbohover.png) center center no-repeat;
+    background-size: contain;
   }
+  input[type="checkbox"]:focus::before, input[type="checkbox"]:active::before{
+    background: url(../img/turboclick.png) center center no-repeat;
+    background-size: contain;
+  }
+  input:checked[type="checkbox"]::before {
+    bottom: 40px;
+  }
+/*auto btn*/
+.auto {position: relative; animation: all .3 ease;left: 45px;top: 5px;}
+.auto-list {
+    display: none;
+    width: 388px;
+    height: 386px;
+    background: url(../img/spinselect_box_bg.png) center center no-repeat;
+    background-size: cover;
+}
+.auto-list__item {
+    color: #ffd100;
+    font-size: 36px;
+    line-height: 45px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-left: 55px;
+  
+}
+.auto-list__item:hover {
+    cursor: pointer;
+    color: #7fdb80;
+}
+.auto-list__item:nth-child(1) {
+    padding-left: 90px;
+    padding-top: 25px;
+}
+.auto-list:nth-child(1)::before {
+    
+    content: url(../img/icon_feature.png);
+    position: absolute;
+    left: 55px;
+    top: 30px;
+}
+.auto-btn {
+    background: url(../img/autonormal.png) center center no-repeat;
+    background-size: contain;
+    border: none; cursor: pointer;
+    width: 280px;
+    height: 80px;
+}
+.auto-btn:hover  {
+    background: url(../img/autohover.png) center center no-repeat;
+    background-size: contain;
+}
+.auto-btn:focus, .auto-btn:active  {
+    background: url(../img/autoclick.png) center center no-repeat;
+    background-size: contain;
+}
+
+.auto-img {
+    max-width: 80px;
+    margin-left: -55px;
+}
+.open-autolist {display: block;}
+
+/*spin*/
+.spin {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: url(../img/spin-normal.png) center no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    right: 82px;
+}
+.spin:hover {
+    background: url(../img/spin-hover.png) center no-repeat;
+    background-size: contain;
+  
+}
+.spin:focus, .spin:active {
+    background: url(../img/spin-click.png) center no-repeat;
+    background-size: contain;
+}
+.spin-img {width: 190px;
+    animation: spin 5s infinite linear;
+}
+@keyframes spin {
+    0% {transform:rotate(0);}
+    
+    25% {transform:rotate(180deg);}
+    
+    50% {transform:rotate(360deg);}
+    75% {transform:rotate(180deg);}
+    
+    100% {transform:rotate(0);}
+}
+
 

@@ -13,27 +13,44 @@
 
 
 
-<div class="bittons-bar">
+<div class="buttons-bar">
     <button class="info"> <img src="img/info.png" alt="info" class="ingo-img"> </button>
     
     <div class="total">
-        <button id="less" onclick="restar()"> <img src="img/less.png" alt="less"> </button>
+        <button id="less" class="btn" onclick="restar()"> <img src="img/less.png" alt="less"> </button>
          <div class="totalbet">
             <p class="totaltxt">TOTAL BET</p>
             <p id="num" class="num">0</p>
          </div>
         
-        <button id="more" onclick="sumar()"><img src="img/more.png" alt="more"></button>
+        <button id="more" class="btn" onclick="sumar()"><img src="img/more.png" alt="more"></button>
         
     </div>
-<div class="totalcoin">
-         <p class="totaltxt">COIN</p>
-         <p id="num" class="num">0</p>
+   <div class="totalcoin">
+            <p class="totaltxt">COIN</p>
+            <p id="num" class="num">0</p>
+   </div>
+   <p class="good">good luck!</p>
+   <div class="turbo " >
+      <input type="checkbox">
+   </div>
+   <div class="auto">
+      <div class="auto-list">
+         <p class="auto-list__item">until-feature</p>
+         <p class="auto-list__item">25 spin</p>
+         <p class="auto-list__item">20 spin</p>
+         <p class="auto-list__item">15 spin</p>
+         <p class="auto-list__item">10 spin</p>
+         <p class="auto-list__item">5 spin</p>
       </div>
-<p class="good">good luck!</p>
-<div class="turbo">
-   <input type="checkbox">
- </div>
+      <button class="auto-btn">
+         <img src="img/auto.png" alt="auto" class="auto-img">
+      </button>
+   </div>
+   <button class="spin ">
+      <img src="img/spin_sign.png" alt="spin-signature" class="spin-img">
+   </button>
+
 
 </div>
 
@@ -46,7 +63,6 @@
 const num = document.getElementById('num');
 const more = document.getElementById('more');
 const less = document.getElementById('less');
-
 
 const sumar = () => {
    removeAnimationClass();
@@ -86,6 +102,25 @@ const testColor = () =>{
       num.style.color = "var(--color__1)";
    }
 }
+
+//auto 
+let open;
+addEventListener( 'click' , ({target}) => {
+if(target.closest('.open-autolist')) return;
+let elem;
+if(target = target.closest('.auto-btn')) {
+const btn = document.querySelectorAll('.auto-btn');
+const index = Array.prototype.findIndex.call(btn, el => el === target);
+elem = document.querySelectorAll('.auto-list')[index];
+if(!elem) return;
+elem.classList.toggle('open-autolist');
+}
+if(open && open != elem) open.classList.remove('open-autolist');
+open = elem;
+});
+//click sound
+
+
 
 </script>
 
