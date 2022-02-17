@@ -69,7 +69,7 @@ body {font-family: 'Noto Sans';}
 .totaltxt {
     color: #ff6972;
     font-size: 29px;
-        line-height: 1.223;
+        line-height: 50px;
         text-align: center;
         font-weight: 700;
 }
@@ -90,6 +90,10 @@ body {font-family: 'Noto Sans';}
 
 #more:hover, #less:hover{
     background: url(../img/p-m-hover.png) center center no-repeat;
+    background-size: contain;
+}
+#more:focus, #less:focus{
+    background: url(../img/p-m-click.png) center center no-repeat;
     background-size: contain;
 }
 
@@ -118,3 +122,60 @@ body {font-family: 'Noto Sans';}
         
     }
 }
+
+
+.totalcoin {
+    width: 200px;
+    height: 100px;
+    background: url(../img/bg_totalcoin.png) center center no-repeat;
+    background-size: contain;
+}
+
+.good {
+    font-family: 'Noto Sans';
+    color: #ffe400;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/*turbo*/
+.turbo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  input[type="checkbox"] {
+    width: 100px;
+    height: 200px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #c6c6c6;
+    outline: none;
+    border-radius: 50px;
+    box-shadow: inset 0 0 5px rgba(0,0,0, .2);
+    transition: 0.5s;
+    position: relative;
+  }
+  input:checked[type="checkbox"] {
+    background: #02a9f4;
+  }
+  input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+ 
+    bottom: 0;
+    background: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0,0,0, .2);
+    transition: 0.5s;
+  }
+  input:checked[type="checkbox"]::before {
+    bottom: 100px;
+  }
+
