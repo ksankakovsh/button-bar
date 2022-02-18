@@ -8,13 +8,8 @@
 </head>
 <body>
 
-
-
-
-
-
 <div class="buttons-bar">
-    <button class="info"> <img src="img/info.png" alt="info" class="ingo-img"> </button>
+    <button class="info btn"> <img src="img/info.png" alt="info" class="ingo-img"> </button>
     
     <div class="total">
         <button id="less" class="btn" onclick="restar()"> <img src="img/less.png" alt="less"> </button>
@@ -31,7 +26,7 @@
             <p id="num" class="num">0</p>
    </div>
    <p class="good">good luck!</p>
-   <div class="turbo " >
+   <div class="turbo btn" >
       <input type="checkbox">
    </div>
    <div class="auto">
@@ -43,87 +38,19 @@
          <p class="auto-list__item">10 spin</p>
          <p class="auto-list__item">5 spin</p>
       </div>
-      <button class="auto-btn">
+      <button class="auto-btn btn">
          <img src="img/auto.png" alt="auto" class="auto-img">
       </button>
    </div>
-   <button class="spin ">
+   <button class="spin btn">
       <img src="img/spin_sign.png" alt="spin-signature" class="spin-img">
    </button>
 
 
 </div>
+<audio id="sound" src="Button_Click.wav"></audio>
 
-
-
-
-<script>
-
-
-const num = document.getElementById('num');
-const more = document.getElementById('more');
-const less = document.getElementById('less');
-
-const sumar = () => {
-   removeAnimationClass();
-   setTimeout(() =>{
-      num.classList.add('animacion');
-   }, 10);
-   num.innerText++;
-   
-   console.log(num.innerHTML);
-   return num.innerText;
-}
-
-
-const restar = () => {
-   removeAnimationClass();
-   setTimeout(() =>{
-      num.classList.add('animacion2');
-   }, 10);
-   num.innerText--;
-   
-   console.log(num.innerHTML);
-   return num.innerText;
-}
-
-
-const removeAnimationClass = () => {
-   num.classList.remove('animacion2', 'animacion');
-}
-
-
-const testColor = () =>{
-   if(num.innerText === '0'){
-      num.style.color = '#999';
-   }else if(num.innerText < '0'){
-      num.style.color = "var(--color__2)";
-   }else{
-      num.style.color = "var(--color__1)";
-   }
-}
-
-//auto 
-let open;
-addEventListener( 'click' , ({target}) => {
-if(target.closest('.open-autolist')) return;
-let elem;
-if(target = target.closest('.auto-btn')) {
-const btn = document.querySelectorAll('.auto-btn');
-const index = Array.prototype.findIndex.call(btn, el => el === target);
-elem = document.querySelectorAll('.auto-list')[index];
-if(!elem) return;
-elem.classList.toggle('open-autolist');
-}
-if(open && open != elem) open.classList.remove('open-autolist');
-open = elem;
-});
-//click sound
-
-
-
-</script>
-
+<script src="js/script.js"></script>
 
 </body>
 </html>

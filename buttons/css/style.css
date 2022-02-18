@@ -57,7 +57,10 @@ body {font-family: 'Noto Sans';height: 100vh;
     background: url(../img/info-click.png) center center no-repeat;
     background-size: contain;
 }
-
+.info:disabled {
+    background: url(../img/info-disable.png) center center no-repeat;
+    background-size: contain;
+}
 
 /*less-more*/
 .total{
@@ -107,6 +110,10 @@ body {font-family: 'Noto Sans';height: 100vh;
 }
 #more:focus, #less:focus, #more:active, #less:active{
     background: url(../img/p-m-click.png) center center no-repeat;
+    background-size: contain;
+}
+#more:disabled, #more:disabled {
+    background: url(../img/p-m-disable.png) center center no-repeat;
     background-size: contain;
 }
 .animacion{
@@ -188,6 +195,10 @@ body {font-family: 'Noto Sans';height: 100vh;
     background: url(../img/turbohover.png) center center no-repeat;
     background-size: contain;
   }
+  input[type="checkbox"]:disabled::before{
+    background: url(../img/turbodisable.png) center center no-repeat;
+    background-size: contain;
+  }
   input[type="checkbox"]:focus::before, input[type="checkbox"]:active::before{
     background: url(../img/turboclick.png) center center no-repeat;
     background-size: contain;
@@ -239,6 +250,10 @@ body {font-family: 'Noto Sans';height: 100vh;
     background: url(../img/autohover.png) center center no-repeat;
     background-size: contain;
 }
+.auto-btn:disabled  {
+    background: url(../img/autodisable.png) center center no-repeat;
+    background-size: contain;
+}
 .auto-btn:focus, .auto-btn:active  {
     background: url(../img/autoclick.png) center center no-repeat;
     background-size: contain;
@@ -264,7 +279,10 @@ body {font-family: 'Noto Sans';height: 100vh;
 .spin:hover {
     background: url(../img/spin-hover.png) center no-repeat;
     background-size: contain;
-  
+}
+.spin:disabled {
+    background: url(../img/spin-disable.png) center no-repeat;
+    background-size: contain;
 }
 .spin:focus, .spin:active {
     background: url(../img/spin-click.png) center no-repeat;
