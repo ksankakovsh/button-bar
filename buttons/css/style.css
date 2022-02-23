@@ -22,7 +22,7 @@
 
 .buttons-bar {position: relative;
     display: flex;
-    margin-top: 200px;
+    height: 100vh;
     background: url(../img/UI.png) center center no-repeat;
     background-size: contain;
     align-items: center;
@@ -31,23 +31,18 @@
 /*info*/
 body {font-family: 'Noto Sans';height: 100vh;
  background: #6a3505}
-.info {
-    background: url(../img/info-normal.png) center center no-repeat;
-    background-size: contain;
-    width: 100px;
-    height: 100px; transition: .4s;
-}
-.ingo-img {
-    width: 15px;
+
+.info-img {
+    width: 0.7vw;
 }
 .info {
     background: url(../img/info-normal.png) center center no-repeat;
     background-size: contain;
-    width: 85px;
-    height: 85px;
-    border: none;
+    width: 5vw;
+    height: 8vh;
+    border: none;transition: .4s;
     cursor: pointer;
-    margin-left: 89px;
+    margin-left: 4.5vw;
 }
 .info:hover {
     background: url(../img/info-hover.png) center center no-repeat;
@@ -67,25 +62,30 @@ body {font-family: 'Noto Sans';height: 100vh;
  
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 0.3vh;
     transform: rotate(0.5deg);
-    width: 310px;
-    height: 95px;
+    width: 16vw;
+    height: 8.6vh;
     background: url(../img/bg_totalbet.png) center no-repeat;
     background-size: contain;
 }
-
-#num{
-        color: #ffd100;
-        font-size: 29px;
-        line-height: 1.223;
-        text-align: center;
+.totalbet {
+    align-self: center;
+}
+.ml {
+    width: 2vw;
+}
+.num {
+    font-size: 2rem;
+    line-height: 1;
+text-align: center;
   font-weight: 700;
+ color: #ffd100;
 }
 .totaltxt {
     color: #ff6972;
-    font-size: 16px;
-        line-height: 50px;
+    font-size: 1rem;
+    line-height: 2rem;
         text-align: center;
         font-weight: 700;
 }
@@ -98,9 +98,9 @@ body {font-family: 'Noto Sans';height: 100vh;
        
         background: url(../img/p-m-normal.png) center center no-repeat;
       background-size: contain;
-      width: 75px;
-      height: 95px;
-      margin: 0 10px;
+      width: 3.8vw;
+      height: 9vh;
+      margin: 0 0.4vw;
     
 }
 
@@ -139,17 +139,18 @@ body {font-family: 'Noto Sans';height: 100vh;
 }
 /* field-coin + title*/
 .totalcoin {
-    width: 155px;
-    height: 100px;
+    width: 8vw;
+    height: 8.6vh;
     background: url(../img/bg_totalcoin.png) center center no-repeat;
     background-size: contain;
-    margin-top: 15px;
+    margin-top: 1vh;padding-top: 2vh;
+    align-self: center;
 }
 
 .good {
     font-family: 'Noto Sans';
     color: #ffe400;
-    font-size: 70px;
+    font-size: 4em;
     font-weight: 700;
     text-transform: uppercase;flex-basis: 31%;
     text-align: center;
@@ -158,12 +159,12 @@ body {font-family: 'Noto Sans';height: 100vh;
 /*turbo*/
 .turbo {
     cursor: pointer;position: relative;
-    left: 25px;
+    left: 1.5vw;
   }
   
   input[type="checkbox"] {
-    width: 120px;
-    height: 101px;
+    width: 6.2vw;
+    height: 5.2vw;
     -webkit-appearance: none;
     -moz-appearance: none;
     background: url(../img/bg_turbooff.png) center center no-repeat;
@@ -181,10 +182,10 @@ body {font-family: 'Noto Sans';height: 100vh;
   input[type="checkbox"]::before {
     content: '';
     position: absolute;
-    width: 99px;
-    height: 55px;
-    bottom: 10px;
-    left: 10px;
+    width: 5vw;
+    height: 6vh;
+    bottom: 1vh;
+    left: 1vh;
     border: none;
     background: url(../img/turbonormal.png) center center no-repeat;
     background-size: contain;
@@ -204,16 +205,19 @@ body {font-family: 'Noto Sans';height: 100vh;
     background-size: contain;
   }
   input:checked[type="checkbox"]::before {
-    bottom: 40px;
+    bottom: 3.6vh;
   }
 /*auto btn*/
 .auto {position: relative; animation: all .3 ease;left: 45px;top: 5px;}
 .auto-list {
     display: none;
-    width: 388px;
-    height: 386px;
+   
+    width: 20vw;
+    position: absolute;
+    height: 41vh;
     background: url(../img/spinselect_box_bg.png) center center no-repeat;
     background-size: cover;
+    top: -395px;
 }
 .auto-list__item {
     color: #ffd100;
@@ -229,8 +233,8 @@ body {font-family: 'Noto Sans';height: 100vh;
     color: #7fdb80;
 }
 .auto-list__item:nth-child(1) {
-    padding-left: 90px;
-    padding-top: 25px;
+    padding-left: 4.6vw;
+    padding-top: 1.3vw;
 }
 .auto-list:nth-child(1)::before {
     
@@ -243,8 +247,8 @@ body {font-family: 'Noto Sans';height: 100vh;
     background: url(../img/autonormal.png) center center no-repeat;
     background-size: contain;
     border: none; cursor: pointer;
-    width: 280px;
-    height: 80px;
+    width: 15vw;
+    height: 9vh;
 }
 .auto-btn:hover  {
     background: url(../img/autohover.png) center center no-repeat;
@@ -260,21 +264,21 @@ body {font-family: 'Noto Sans';height: 100vh;
 }
 
 .auto-img {
-    max-width: 80px;
-    margin-left: -55px;
+    max-width: 5vw;
+    margin-left: -2vw;
 }
 .open-autolist {display: block;}
 
 /*spin*/
 .spin {
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 13.5vw;
+    height: 21.5vh;
     background: url(../img/spin-normal.png) center no-repeat;
     background-size: contain;
     border: none;
     cursor: pointer;
-    right: 82px;
+    right: 4vw;
 }
 .spin:hover {
     background: url(../img/spin-hover.png) center no-repeat;
@@ -288,7 +292,7 @@ body {font-family: 'Noto Sans';height: 100vh;
     background: url(../img/spin-click.png) center no-repeat;
     background-size: contain;
 }
-.spin-img {width: 190px;
+.spin-img {width: 8vw;
     animation: spin 5s infinite linear;
 }
 @keyframes spin {
@@ -301,5 +305,95 @@ body {font-family: 'Noto Sans';height: 100vh;
     
     100% {transform:rotate(0);}
 }
+
+/*media queries */
+@media  (max-width: 1500px) { 
+    .good {font-size: 3em;}
+    .auto-img {
+        max-width: 4vw;
+        margin-left: -5vw;
+    }
+    input[type="checkbox"] {
+        width: 6.2vw;
+        height: 7.2vw;
+    }
+    input[type="checkbox"]::before {
+        bottom: 2vh;
+    }
+
+}
+
+@media  (max-width: 1248px) { 
+    .good {font-size: 2em;}
+    .auto-img {
+        max-width: 4vw;
+        margin-left: -7vw;
+    }
+    input[type="checkbox"] {
+        width: 6.7vw;
+        height: 7vw;}
+    .num {
+        font-size: 19px;
+        line-height: 1;}
+   .totaltxt {
+            font-size: 12px;
+            line-height: 25px;
+   }
+   .totalcoin {
+    padding-top: 3vh;
+}
+input[type="checkbox"]::before {
+    bottom: 1vh;
+    width: 5.2vw;
+}
+
+}
+@media  (max-width: 991px) { 
+    .auto {left: 2vw;}
+    input[type="checkbox"] {
+        width: 6vw;
+        height: 7vw;
+    }
+    input[type="checkbox"]::before {
+        bottom: 0;
+        width: 4.5vw;
+    }
+    .num {font-size: 14px;}
+
+}
+@media  (max-width: 930px) { 
+    .totaltxt {
+        font-size: 8px;
+        line-height: 20px;
+    }
+    .totalcoin {
+        padding-top: 4vh;
+    }
+}
+@media  (max-width: 768px) { 
+    .good {font-size: 2em;}
+    input[type="checkbox"]::before {
+        bottom: -0.5vh;
+        width: 4.7vw;
+        left: 0.6vw;
+    }
+    .totaltxt {
+        line-height: 13px;
+    }
+    .totalcoin {
+        padding-top: 4vh;
+    }
+    
+}
+@media  (max-width: 680px) { 
+.totalcoin {
+        padding-top: 4.7vh;
+    }
+#more, #less {
+        height: 8.5vh;   
+    } 
+}
+
+
 
 
