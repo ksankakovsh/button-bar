@@ -392,6 +392,7 @@ input[type="checkbox"]::before {
 #more, #less {
         height: 8.5vh;   
     } 
+    .good {font-size: 1em;}
 }
 
 
